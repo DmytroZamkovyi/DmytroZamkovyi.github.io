@@ -95,3 +95,9 @@ li {
     font-size: 20px;
     color: black
 }
+
+#pages{
+    color: black;
+    text-decoration: none;
+    border-bottom: thick double #082835;
+}

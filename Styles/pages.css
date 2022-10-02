@@ -1,4 +1,4 @@
-html, body, div, p, a, ol, footer, header{
+html, body, head, div, p, a, ol, header{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,7 +22,7 @@ header, footer{
 
 #X {
     color: whitesmoke;
-    padding: 34px;
+    padding: 31px;
     margin: 0;
     text-align: right;
 }
@@ -30,7 +30,7 @@ header, footer{
 
 #Y {
     color: whitesmoke;
-    padding: 34px;
+    padding: 31px;
     margin: 0;
 }
 
@@ -81,7 +81,7 @@ main {
 
 #block-5 {
     background-color: cadetblue;
-    width: 24vw;
+    width: 24.16vw;
 }
 
 

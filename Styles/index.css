@@ -1,0 +1,30 @@
+header, footer{
+    background-color: rgb(16, 15, 27);
+    height: 100%;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+
+#block-1-7 {
+    color: whitesmoke;
+    display: flex;
+    align-items: baseline;
+    padding: 20px;
+    flex-grow: 50vh;
+    border: 1rem solid;
+    border-color: #082835;
+}
+
+
+
+#X, #Y {
+    color: whitesmoke;
+    padding: 31px;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    margin: auto;
+    min-width: 20vw;
+}

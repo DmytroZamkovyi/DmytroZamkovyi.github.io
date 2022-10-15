@@ -18,7 +18,7 @@ table td {
 
 
 #block-X, #block-Y {
-    width: 25%
+    width: 25%;
 }
 
 
@@ -30,7 +30,6 @@ table td {
 #block-2, #block-3, #block-4, #block-5{
     width: 50%;
     vertical-align: baseline;
-    
 }
 
 

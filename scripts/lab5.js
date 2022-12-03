@@ -103,14 +103,18 @@
 
 
 {
-    document.addEventListener("DOMContentLoaded", e => {
-        let block1 = document.getElementById('text-block-1');
-        block1.addEventListener("select", e => {
-            console.log(1123);
-        })
-    })
+    let tmp = true;
+    function new_ln(id) {
+        if (tmp) {
+            let textare = document.createElement("TEXTAREA");
+            textare.style.display = 'flex'
+            document.getElementById(id).style.flexDirection = 'column';
+            document.getElementById(id).append(textare);
+            tmp = false;
+        }
+    }
 
-    function save_ls(key, value) {
-        localStorage.setItem(key, value);
+    function del_empty_ln(id) {
+        console.log(111);
     }
 }

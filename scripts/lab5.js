@@ -103,15 +103,16 @@
 
 
 {
-    let tmp = true;
+    window.addEventListener('load', e => {
+        alert("В попередній сесії було створено стільки елементів нумерованого списку: " + localStorage.getItem("li"));
+    });
+
+    let c = 0;
     function new_ln(id) {
-        if (tmp) {
-            let textare = document.createElement("TEXTAREA");
-            textare.style.display = 'flex'
-            document.getElementById(id).style.flexDirection = 'column';
-            document.getElementById(id).append(textare);
-            tmp = false;
-        }
+        let li = document.createElement("li");
+        document.getElementById(id).append(li);
+        c = c + 1;
+        localStorage.setItem("li", c);
     }
 
     function del_empty_ln(id) {

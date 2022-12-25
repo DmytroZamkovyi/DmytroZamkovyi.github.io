@@ -9,20 +9,12 @@
         let array2 = Array.from(e2.children);
 
         array2.forEach(el => {
-            e1.append(el); //if (el.tagName != "TEXTAREA")
+            e1.append(el);
         });
 
         array1.forEach(el => {
-            e2.append(el); //if (el.tagName != "TEXTAREA")
+            e2.append(el);
         });
-
-        // if (!swap_click == true) {
-        //     elem1.style.gridTemplateColumns = "1fr 1fr 1fr 2fr";
-        //     elem2.style.gridTemplateColumns = "1fr 2fr";
-        // } else {
-        //     elem1.style.gridTemplateColumns = "2fr 1fr";
-        //     elem2.style.gridTemplateColumns = "2fr 1fr 1fr 1fr";
-        // }
 
         elem1.append(arr1.pop());
     }
@@ -75,9 +67,11 @@
 
     function find_max(class_name) {
         let elements = document.getElementsByClassName(class_name);
-        let max = elements[0].value;
-        for (let i = 1; i < elements.length; ++i) {
-            if (elements[i].value > max) max = elements[i].value;
+        let max = Number(elements[0].value);
+        for (let i = 0; i < elements.length; i++) {
+            if (Number(elements[i].value) > max) {
+                max = Number(elements[i].value);
+            }
         }
         alert("Найбільший елемент: " + max);
         document.cookie = "max-element=" + max;
@@ -104,12 +98,24 @@
 
 {
     window.addEventListener('load', e => {
+        let k = Number(localStorage.getItem("li"));
+        if (k > 0) {
+            let parent = document.getElementById("div-text-block-1");
+            let child  = document.getElementById("text-block-1");
+            parent.removeChild(child);
+        }
+        for (let i = 0; i < k; ++i) {
+            new_ln("ol-1");
+        }
         alert("В попередній сесії було створено стільки елементів нумерованого списку: " + localStorage.getItem("li"));
     });
 
     let c = 0;
     function new_ln(id) {
         let li = document.createElement("li");
+        if (c % 2 == 1) {
+            li.style.color = 'white';
+        }
         document.getElementById(id).append(li);
         c = c + 1;
         localStorage.setItem("li", c);
